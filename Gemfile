@@ -25,8 +25,8 @@ gem 'omniauth-facebook'
 gem 'sendgrid-rails', '~> 2.0', '>= 2.0.5'
 
 gem 'paperclip'
-gem 'carrierwave'
-gem 'mini_magick'
+
+
 
 group :development, :test do
   gem 'byebug'
