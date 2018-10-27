@@ -1,28 +1,39 @@
-# README
+# PDFIT
+* Stack
+backend:  
+  Rails 5.2.0  
+  MongoDB  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+frontend:  
+  Webpacker  
+  [Vuejs](https://vuejs.org)  
+  Vuex, VueResources  
+  [element-ui](https://element.eleme.io/#/en-US/component/installation)  
 
-Things you may want to cover:
+* Description  
+ Upload PDF's to S3 and search in content  
 
-* Ruby version
+* Deployment instructions  
+Live on heroku  
+git clone https://git.heroku.com/cam-production.git  
+git remote add heroku-staging https://git.heroku.com/cam-staging.git  
 
-* System dependencies
+# HEROKU ENV
+  ENV['S3_USER']  
+  ENV['S3_SECRET_ACCESS_KEY']  
+  ENV['S3_ACCESS_KEY_ID']  
+  ENV['S3_CONSOLE_LINK']  
+  heroku config:set --app=cam-production S3_ACCESS_KEY_ID=..  
+  heroku config:set --app=cam-stagign S3_ACCESS_KEY_ID=..  
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>."# CMEHA" 
+* Development setup instructions  
+install rvm, ruby-2.5.1  
+```
+ git clone git@gitlab.com:hamedmp/cam.git
+ cd ~/cam && bundle install && yarn install
+ ./bin/webpack-dev-server
+```
+in another window run backend
+```
+ pumactl start
+```
