@@ -40,7 +40,7 @@ gem 'thin'
 
 gem 'ransack'
 
-gem 'json', '>= 1.8'
+gem 'json', '~> 1.8.3'
 
 group :development, :test do
   gem 'byebug'
